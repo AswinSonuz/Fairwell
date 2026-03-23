@@ -15,13 +15,8 @@
             --obsidian: #050505;
         }
 
-        * {
-            selection-background: var(--gold-primary);
-            selection-color: var(--obsidian);
-        }
-
         body {
-            background: linear-gradient(rgba(5, 5, 5, 0.94), rgba(5, 5, 5, 0.94)), 
+            background: linear-gradient(rgba(5, 5, 5, 0.92), rgba(5, 5, 5, 0.92)), 
                         url('https://preview.redd.it/1000402093-jpg-v0-x8c28l2f60qc1.jpg?width=1080&crop=smart&auto=webp&s=6510343a4e9b67468161394a1d746d07e1586523');
             background-size: cover;
             background-position: center;
@@ -29,7 +24,6 @@
             color: #E5E7EB;
             font-family: 'Manrope', sans-serif;
             scroll-behavior: smooth;
-            overflow-x: hidden;
         }
 
         .gold-text {
@@ -39,7 +33,6 @@
             font-family: 'Cinzel', serif;
         }
 
-        /* Video Aura Effect */
         .video-wrapper {
             position: relative;
             z-index: 10;
@@ -53,64 +46,57 @@
             transform: translate(-50%, -50%);
             width: 110%;
             height: 110%;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
             z-index: -1;
         }
 
         .glass-quote {
-            background: rgba(255, 255, 255, 0.01);
-            backdrop-filter: blur(30px);
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(25px);
             border-left: 2px solid var(--gold-primary);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         .glass-quote:hover {
-            background: rgba(212, 175, 55, 0.03);
-            border-left-width: 6px;
-            transform: translateX(15px);
+            background: rgba(212, 175, 55, 0.05);
+            transform: translateX(10px);
         }
 
         .btn-premium {
-            border: 1px solid rgba(212, 175, 55, 0.4);
-            padding: 1.2rem 3.5rem;
-            letter-spacing: 0.6em;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            padding: 14px 40px;
+            letter-spacing: 0.5em;
             font-size: 10px;
             text-transform: uppercase;
             font-weight: 800;
-            transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+            transition: 0.4s;
             background: transparent;
             color: var(--gold-light);
-            position: relative;
-            overflow: hidden;
         }
 
         .btn-premium:hover {
             background: var(--gold-primary);
             color: var(--obsidian);
-            box-shadow: 0 0 50px rgba(212, 175, 55, 0.3);
-            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
         }
 
         .float-text {
-            animation: float 5s ease-in-out infinite;
+            animation: float 4s ease-in-out infinite;
         }
         @keyframes float {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-12px); }
+            50% { transform: translateY(-10px); }
         }
 
-        /* Sophisticated Scroll Reveal */
         .reveal-on-scroll {
             opacity: 0;
-            transform: translateY(50px);
-            filter: blur(8px);
-            transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(40px);
+            transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
         .reveal-active {
             opacity: 1;
             transform: translateY(0);
-            filter: blur(0);
         }
     </style>
 </head>
@@ -118,32 +104,31 @@
 
     <header class="min-h-screen flex flex-col items-center justify-center text-center px-4 relative overflow-hidden">
         <div class="animate__animated animate__fadeIn flex flex-col items-center w-full">
-            
-            <div class="mb-14">
-                <p class="uppercase tracking-[0.7em] text-[10px] md:text-[13px] text-white font-light opacity-70">
+            <div class="mb-12">
+                <p class="uppercase tracking-[0.6em] text-[11px] md:text-[14px] text-white font-light opacity-90">
                     Department of Civil Engineering
                 </p>
-                <p class="lowercase tracking-[0.5em] text-[10px] text-gray-500 mt-3 italic">
+                <p class="lowercase tracking-[0.4em] text-[10px] text-gray-500 mt-2">
                     presents
                 </p>
             </div>
 
-            <div class="mb-12 float-text">
+            <div class="mb-10 float-text">
                 <img src="image.png" alt="ഇത്തിരി നേരം ഒത്തിരി കാര്യം" 
-                     class="w-full max-w-[240px] md:max-w-[420px] h-auto object-contain brightness-110">
+                     class="w-full max-w-[220px] md:max-w-[400px] h-auto object-contain">
             </div>
 
-            <div class="mb-14">
-                <h2 class="gold-text text-2xl md:text-4xl tracking-[0.4em] font-bold">FAIRWELL PARTY</h2>
-                <p class="text-gray-500 text-[10px] md:text-[11px] tracking-[0.4em] mt-3 uppercase font-light">Class of 2022 — 2026</p>
+            <div class="mb-12">
+                <h2 class="gold-text text-xl md:text-3xl tracking-[0.4em] font-bold">FAIRWELL PARTY</h2>
+                <p class="text-gray-400 text-[10px] md:text-[12px] tracking-[0.3em] mt-2">2022 – 2026 BATCH</p>
             </div>
 
-            <div class="mb-10 opacity-60 hover:opacity-100 transition-all duration-700 transform hover:scale-110">
+            <div class="mb-8 opacity-80 hover:opacity-100 transition-opacity">
                 <img src="dept-logo.png" alt="Department Logo" 
-                     class="w-20 md:w-24 h-auto mx-auto filter brightness-125 drop-shadow-[0_0_12px_rgba(212,175,55,0.4)]">
+                     class="w-24 md:w-27 h-auto mx-auto filter brightness-110 drop-shadow-[0_0_8px_rgba(212,175,55,0.3)]">
             </div>
 
-            <div class="h-[1px] w-32 bg-gradient-to-r from-transparent via-gold-primary to-transparent mx-auto mb-14 opacity-30"></div>
+            <div class="h-[1px] w-24 bg-gradient-to-r from-transparent via-gold-primary to-transparent mx-auto mb-12 opacity-40"></div>
 
             <a href="#main-video" class="btn-premium">
                 Begin Experience
@@ -151,18 +136,16 @@
         </div>
     </header>
 
-    <section id="main-video" class="py-48 px-6 max-w-6xl mx-auto flex flex-col items-center">
-        <div class="text-center mb-20 reveal-on-scroll">
-            <p class="text-gray-400 font-light italic text-xl md:text-2xl mb-6 tracking-wide">
-                "It’s strange how strangers become stories you never want to end."
-            </p>
-            <div class="w-16 h-[1px] bg-gold-primary mx-auto opacity-50"></div>
+    <section id="main-video" class="py-40 px-6 max-w-5xl mx-auto flex flex-col items-center">
+        <div class="text-center mb-16 reveal-on-scroll">
+            <p class="text-gray-400 italic text-lg mb-4">"It’s strange how strangers become stories you never want to end."</p>
+            <div class="w-12 h-[2px] bg-gold-primary mx-auto"></div>
         </div>
 
         <div class="video-wrapper w-full reveal-on-scroll">
-            <div class="aspect-video bg-black shadow-[0_0_80px_rgba(0,0,0,0.9)] border border-white/5 rounded-sm overflow-hidden">
+            <div class="aspect-video bg-black shadow-[0_0_60px_rgba(0,0,0,0.8)] border border-white/10 rounded-sm">
                 <iframe 
-                    class="w-full h-full grayscale hover:grayscale-0 transition-all duration-1000" 
+                    class="w-full h-full" 
                     src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
                     frameborder="0" 
                     allow="autoplay; encrypted-media" 
@@ -173,72 +156,82 @@
     </section>
 
     <section class="py-64 px-6 max-w-7xl mx-auto relative overflow-hidden">
-        <div class="absolute left-10 top-0 w-[1px] h-full bg-white/[0.03] hidden lg:block"></div>
-        <div class="absolute right-10 top-0 w-[1px] h-full bg-white/[0.03] hidden lg:block"></div>
+        <div class="absolute left-10 top-0 w-[1px] h-full bg-white/5 hidden lg:block"></div>
+        <div class="absolute right-10 top-0 w-[1px] h-full bg-white/5 hidden lg:block"></div>
 
-        <div class="flex flex-col space-y-48 md:space-y-80">
+        <div class="flex flex-col space-y-40 md:space-y-64">
             
             <div class="relative w-full md:w-3/4 self-start reveal-on-scroll">
-                <div class="absolute -top-8 -left-8 w-24 h-24 border-t border-l border-gold-primary/20 opacity-40"></div>
-                <div class="glass-quote p-12 md:p-24 bg-gradient-to-br from-white/[0.02] to-transparent shadow-2xl">
-                    <p class="text-3xl md:text-5xl font-extralight text-white leading-[1.3] mb-16 italic tracking-tight">
+                <div class="absolute -top-6 -left-6 w-24 h-24 border-t-2 border-l-2 border-gold-primary/40 opacity-50"></div>
+                <div class="glass-quote p-12 md:p-20 bg-gradient-to-br from-white/[0.03] to-transparent shadow-2xl">
+                    <p class="text-2xl md:text-5xl font-extralight text-white leading-relaxed mb-12 italic">
                         "Build <span class="gold-text italic font-normal">bridges</span>, not walls. You’ve mastered the engineering of structures, now go engineer a <span class="text-gold-light">beautiful life</span>."
                     </p>
-                    <div class="flex flex-col">
-                        <p class="gold-text tracking-[0.6em] text-[12px] uppercase font-bold">Dr. Sudheer V.</p>
-                        <p class="text-gray-500 text-[9px] tracking-[0.4em] uppercase mt-2">The Head of Department</p>
+                    <div class="flex items-center gap-6">
+                        <div class="w-12 h-[1px] bg-gold-primary"></div>
+                        <div class="flex flex-col">
+                            <p class="gold-text tracking-[0.6em] text-[11px] uppercase font-bold">The Head of Department</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="relative w-full md:w-3/4 self-end reveal-on-scroll">
-                <div class="absolute -bottom-8 -right-8 w-24 h-24 border-b border-r border-gold-primary/20 opacity-40"></div>
-                <div class="glass-quote p-12 md:p-24 bg-gradient-to-bl from-white/[0.02] to-transparent border-l-0 border-r-4 border-gold-primary shadow-2xl text-right">
-                    <p class="text-3xl md:text-5xl font-extralight text-white leading-[1.3] mb-16 tracking-tight">
+                <div class="absolute -bottom-6 -right-6 w-24 h-24 border-b-2 border-r-2 border-gold-primary/40 opacity-50"></div>
+                <div class="glass-quote p-12 md:p-20 bg-gradient-to-bl from-white/[0.03] to-transparent border-l-0 border-r-4 border-gold-primary shadow-2xl text-right">
+                    <p class="text-2xl md:text-5xl font-extralight text-white leading-relaxed mb-12">
                         "To the seniors who <span class="text-gold-light italic">paved the way</span>. We promise to keep the spirit of Civil Engineering <span class="gold-text italic font-normal">alive</span> in these halls."
                     </p>
-                    <div class="flex flex-col items-end">
-                        <p class="gold-text tracking-[0.6em] text-[12px] uppercase font-bold">Dilna S.</p>
-                        <p class="text-gray-500 text-[9px] tracking-[0.4em] uppercase mt-2">Junior Student Council</p>
+                    <div class="flex items-center justify-end gap-6">
+                        <div class="flex flex-col text-right">
+                            <p class="gold-text tracking-[0.6em] text-[11px] uppercase font-bold">Junior Student Council</p>
+                        </div>
+                        <div class="w-12 h-[1px] bg-gold-primary"></div>
                     </div>
                 </div>
             </div>
 
             <div class="relative w-full md:w-3/4 self-start reveal-on-scroll">
-                <div class="absolute -top-8 -left-8 w-24 h-24 border-t border-l border-gold-primary/20 opacity-40"></div>
-                <div class="glass-quote p-12 md:p-24 bg-gradient-to-br from-white/[0.02] to-transparent shadow-2xl">
-                    <p class="text-3xl md:text-5xl font-extralight text-white leading-[1.3] mb-16 italic tracking-tight">
-                        "The <span class="gold-text italic font-normal">foundation</span> is laid. It is now time to build the skyscraper of your <span class="text-gold-light">extraordinary dreams</span>."
+                <div class="absolute -top-6 -left-6 w-24 h-24 border-t-2 border-l-2 border-gold-primary/40 opacity-50"></div>
+                <div class="glass-quote p-12 md:p-20 bg-gradient-to-br from-white/[0.03] to-transparent shadow-2xl">
+                    <p class="text-2xl md:text-5xl font-extralight text-white leading-relaxed mb-12 italic">
+                        "The <span class="gold-text italic font-normal">foundation</span> is laid. It is now time to build the skyscraper of your <span class="text-gold-light">dreams</span>."
                     </p>
-                    <div class="flex flex-col">
-                        <p class="gold-text tracking-[0.6em] text-[12px] uppercase font-bold">Prof. Rajesh Kumar</p>
-                        <p class="text-gray-500 text-[9px] tracking-[0.4em] uppercase mt-2">Faculty Advisor</p>
+                    <div class="flex items-center gap-6">
+                        <div class="w-12 h-[1px] bg-gold-primary"></div>
+                        <div class="flex flex-col">
+                            <p class="gold-text tracking-[0.6em] text-[11px] uppercase font-bold">Faculty Advisor</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="relative w-full md:w-3/4 self-end reveal-on-scroll">
-                <div class="absolute -bottom-8 -right-8 w-24 h-24 border-b border-r border-gold-primary/20 opacity-40"></div>
-                <div class="glass-quote p-12 md:p-24 bg-gradient-to-bl from-white/[0.02] to-transparent border-l-0 border-r-4 border-gold-primary shadow-2xl text-right">
-                    <p class="text-3xl md:text-5xl font-extralight text-white leading-[1.3] mb-16 tracking-tight">
-                        "Go forth and <span class="text-gold-light italic">design</span> a world that is sustainable, strong, and <span class="gold-text italic font-normal">unforgettable</span>."
+                <div class="absolute -bottom-6 -right-6 w-24 h-24 border-b-2 border-r-2 border-gold-primary/40 opacity-50"></div>
+                <div class="glass-quote p-12 md:p-20 bg-gradient-to-bl from-white/[0.03] to-transparent border-l-0 border-r-4 border-gold-primary shadow-2xl text-right">
+                    <p class="text-2xl md:text-5xl font-extralight text-white leading-relaxed mb-12">
+                        "Go forth and <span class="text-gold-light italic">design</span> a world that is sustainable, strong, and <span class="gold-text italic font-normal">extraordinary</span>."
                     </p>
-                    <div class="flex flex-col items-end">
-                        <p class="gold-text tracking-[0.6em] text-[12px] uppercase font-bold">Anjali Menon</p>
-                        <p class="text-gray-500 text-[9px] tracking-[0.4em] uppercase mt-2">Placement Coordinator</p>
+                    <div class="flex items-center justify-end gap-6">
+                        <div class="flex flex-col text-right">
+                            <p class="gold-text tracking-[0.6em] text-[11px] uppercase font-bold">Placement Cell</p>
+                        </div>
+                        <div class="w-12 h-[1px] bg-gold-primary"></div>
                     </div>
                 </div>
             </div>
 
             <div class="relative w-full md:w-3/4 self-start reveal-on-scroll">
-                <div class="absolute -top-8 -left-8 w-24 h-24 border-t border-l border-gold-primary/20 opacity-40"></div>
-                <div class="glass-quote p-12 md:p-24 bg-gradient-to-br from-white/[0.02] to-transparent shadow-2xl">
-                    <p class="text-3xl md:text-5xl font-extralight text-white leading-[1.3] mb-16 italic tracking-tight">
+                <div class="absolute -top-6 -left-6 w-24 h-24 border-t-2 border-l-2 border-gold-primary/40 opacity-50"></div>
+                <div class="glass-quote p-12 md:p-20 bg-gradient-to-br from-white/[0.03] to-transparent shadow-2xl">
+                    <p class="text-2xl md:text-5xl font-extralight text-white leading-relaxed mb-12 italic">
                         "A legacy isn't built in a day, but in the <span class="gold-text italic font-normal">moments</span> we shared. Farewell, <span class="text-gold-light">Class of 2026</span>."
                     </p>
-                    <div class="flex flex-col">
-                        <p class="gold-text tracking-[0.6em] text-[12px] uppercase font-bold">Aswin & Team</p>
-                        <p class="text-gray-500 text-[9px] tracking-[0.4em] uppercase mt-2">Batch Representatives</p>
+                    <div class="flex items-center gap-6">
+                        <div class="w-12 h-[1px] bg-gold-primary"></div>
+                        <div class="flex flex-col">
+                            <p class="gold-text tracking-[0.6em] text-[11px] uppercase font-bold">Batch Representatives</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -246,20 +239,16 @@
         </div>
     </section>
 
-    <footer class="py-24 flex flex-col items-center justify-center bg-black/60 backdrop-blur-2xl border-t border-white/5 relative z-20">
+    <footer class="py-20 flex flex-col items-center justify-center bg-black/40 backdrop-blur-md border-t border-white/5">
         <div class="flex flex-col items-center gap-6">
-            <p class="text-gray-500 text-[10px] tracking-[0.5em] uppercase opacity-60">
+            <p class="text-gray-400 text-[11px] tracking-wider opacity-80">
                 © 2026 Aswin TR. All Rights Reserved.
             </p>
         </div>
     </footer>
 
     <script>
-        const observerOptions = { 
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
-        };
-
+        const observerOptions = { threshold: 0.15 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
