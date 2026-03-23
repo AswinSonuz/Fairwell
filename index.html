@@ -3,152 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ഇത്തിരി നേരം ഒത്തിരി കാര്യം | Farewell 2026</title>
+    <title>Farewell Surprise | Civil Engineering 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;800&family=Noto+Sans+Malayalam:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;800&family=Noto+Sans+Malayalam:wght@700&display=swap');
 
-        :root {
-            --paper-bg: #f5f2ed;
-            --ink-dark: #1a1a1a;
-            --accent-teal: #004D40;
-            --sepia-border: rgba(139, 121, 94, 0.2);
-        }
-
+        /* Background logic using your image */
         body {
-            background-color: var(--paper-bg);
-            color: var(--ink-dark);
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://res.cloudinary.com/demo/image/fetch/https://preview.redd.it/1000402093-jpg-v0-x8c28l2f60qc1.jpg?width=1080&crop=smart&auto=webp&s=6510343a4e9b67468161394a1d746d07e1586523');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax Effect */
             font-family: 'Manrope', sans-serif;
+            color: #ffffff;
             overflow-x: hidden;
-            background-image: radial-gradient(rgba(0,0,0,0.05) 1px, transparent 0);
-            background-size: 40px 40px;
         }
 
         .malayalam-title {
             font-family: 'Noto Sans Malayalam', sans-serif;
+            background: linear-gradient(to bottom, #ffffff, #d1d5db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             line-height: 1.2;
-            letter-spacing: -0.02em;
-            color: var(--ink-dark);
-            text-shadow: 2px 2px 0px rgba(0,0,0,0.05);
         }
 
-        /* Hanging Paper Effect */
-        .paper-card {
-            background: #ffffff;
-            border: 1px solid var(--sepia-border);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05), inset 0 0 100px rgba(0,0,0,0.02);
-            position: relative;
+        /* Glassmorphism Design */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
 
-        .paper-card::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            width: 2px;
-            height: 20px;
-            background: var(--sepia-border);
-        }
-
-        .video-glow {
-            position: relative;
-            border-radius: 8px;
+        .video-container {
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0, 77, 64, 0.15);
+            box-shadow: 0 0 40px rgba(0,0,0,0.5);
+            transition: transform 0.4s ease;
         }
 
-        .btn-premium {
-            background: var(--accent-teal);
-            color: white;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid transparent;
+        .video-container:hover {
+            transform: scale(1.01);
         }
 
-        .btn-premium:hover {
-            background: transparent;
-            color: var(--accent-teal);
-            border-color: var(--accent-teal);
-            transform: translateY(-3px);
+        .hanging-card {
+            position: relative;
+            transition: all 0.3s ease;
         }
 
-        /* Background blur animation like the poster */
-        .bg-blur-circle {
-            position: fixed;
-            width: 400px;
-            height: 400px;
-            background: rgba(0, 77, 64, 0.03);
-            filter: blur(80px);
-            border-radius: 50%;
-            z-index: -1;
+        .hanging-card::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            width: 1px;
+            height: 50px;
+            background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.4));
         }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); }
+        ::-webkit-scrollbar-thumb { background: #555; border-radius: 10px; }
     </style>
 </head>
 <body>
 
-    <div class="bg-blur-circle top-0 left-0"></div>
-    <div class="bg-blur-circle bottom-0 right-0"></div>
+    <section class="min-h-screen flex flex-col items-center justify-center text-center px-6">
+        <div class="animate__animated animate__fadeInDown">
+            <p class="uppercase tracking-[0.4em] text-xs font-medium text-gray-300 mb-6">Department of Civil Engineering Presents</p>
+            <h1 class="malayalam-title text-6xl md:text-8xl font-bold mb-8">
+                ഇത്തിരി നേരം <br> ഒത്തിരി കാര്യം
+            </h1>
+            <div class="h-[2px] w-24 bg-white/30 mx-auto mb-8"></div>
+            <p class="text-xl italic font-light max-w-xl mx-auto text-gray-200">
+                “It’s strange how strangers become stories you never want to end.”
+            </p>
+        </div>
 
-    <nav class="py-8 text-center animate__animated animate__fadeInDown">
-        <p class="uppercase tracking-[0.3em] text-xs font-bold text-gray-500 mb-2">Department of Civil Engineering Presents</p>
-        <div class="h-[1px] w-20 bg-teal-800 mx-auto opacity-30"></div>
-    </nav>
+        <div class="mt-12 animate__animated animate__fadeInUp animate__delay-1s">
+            <a href="#surprise" class="px-8 py-3 border border-white/40 rounded-full hover:bg-white hover:text-black transition-all duration-500 uppercase text-xs tracking-widest font-bold">
+                Watch the Surprise
+            </a>
+        </div>
+    </section>
 
-    <header class="max-w-4xl mx-auto text-center px-4 mb-16">
-        <h1 class="malayalam-title text-5xl md:text-7xl font-bold mb-6 animate__animated animate__fadeIn">
-            ഇത്തിരി നേരം <br> ഒത്തിരി കാര്യം
-        </h1>
-        <p class="text-gray-500 tracking-widest uppercase text-sm mb-4">Farewell Party | 2022 – 2026 Batch</p>
-        <p class="italic font-serif text-lg text-gray-600">“It’s strange how strangers become stories you never want to end.”</p>
-    </header>
-
-    <main class="max-w-5xl mx-auto px-4 pb-24">
-        <div class="video-glow animate__animated animate__zoomIn">
-            <div class="aspect-video bg-black flex items-center justify-center">
+    <section id="surprise" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="glass-panel p-4 md:p-8 animate__animated animate__fadeIn">
+            <div class="video-container aspect-video bg-black/40">
                 <iframe 
-                    class="w-full h-full shadow-2xl"
-                    src="https://www.youtube.com/embed/your_video_id?rel=0" 
+                    class="w-full h-full"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
                     frameborder="0" 
                     allowfullscreen>
                 </iframe>
             </div>
-        </div>
-
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="paper-card p-8 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
-                <span class="text-4xl text-teal-800 opacity-20 font-serif">“</span>
-                <p class="text-gray-700 leading-relaxed -mt-4">Build bridges, not walls. You’ve mastered the engineering of structures, now go engineer a beautiful life.</p>
-                <div class="mt-6 border-t pt-4">
-                    <p class="font-bold text-sm uppercase">The Faculty</p>
-                </div>
-            </div>
-
-            <div class="paper-card p-8 animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
-                <span class="text-4xl text-teal-800 opacity-20 font-serif">“</span>
-                <p class="text-gray-700 leading-relaxed -mt-4">From site visits to late-night submissions, we grew up together. See you at the top, Seniors!</p>
-                <div class="mt-6 border-t pt-4">
-                    <p class="font-bold text-sm uppercase">Junior Batch</p>
-                </div>
-            </div>
-
-            <div class="paper-card p-8 animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
-                <span class="text-4xl text-teal-800 opacity-20 font-serif">“</span>
-                <p class="text-gray-700 leading-relaxed -mt-4">To the batch that survived the toughest juries and made the best memories. Cheers to 2026!</p>
-                <div class="mt-6 border-t pt-4">
-                    <p class="font-bold text-sm uppercase">Organizing Team</p>
-                </div>
+            <div class="mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <h3 class="text-2xl font-semibold tracking-tight">Farewell Special: Batch 2022 - 2026</h3>
+                <span class="px-4 py-1 bg-white/10 rounded-full text-xs uppercase tracking-widest border border-white/10">The Movie</span>
             </div>
         </div>
-    </main>
+    </section>
 
-    <footer class="bg-white/50 border-t border-gray-200 py-12 text-center">
-        <div class="mb-6">
-            <p class="font-bold text-gray-900">27 MARCH 2026</p>
-            <p class="text-gray-500 uppercase text-xs tracking-widest">North Block Courtyard</p>
+    <section class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
+            
+            <div class="glass-panel p-8 hanging-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                <p class="text-gray-300 leading-relaxed italic">"To our mentors: You didn't just teach us about cement and steel, you taught us how to build a legacy."</p>
+                <p class="mt-6 text-sm font-bold uppercase tracking-widest text-white">— Juniors</p>
+            </div>
+
+            <div class="glass-panel p-8 hanging-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                <p class="text-gray-300 leading-relaxed italic">"Four years, thousands of memories, and one incredible family. Go conquer the world, Class of 2026."</p>
+                <p class="mt-6 text-sm font-bold uppercase tracking-widest text-white">— Faculty</p>
+            </div>
+
+            <div class="glass-panel p-8 hanging-card animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
+                <p class="text-gray-300 leading-relaxed italic">"Every site visit, every submission, and every laugh led us to this moment. We will miss you."</p>
+                <p class="mt-6 text-sm font-bold uppercase tracking-widest text-white">— Organizing Team</p>
+            </div>
+
         </div>
-        <button class="btn-premium px-10 py-3 rounded-full font-bold text-sm tracking-widest uppercase">
-            Download Memories
-        </button>
+    </section>
+
+    <footer class="py-20 text-center border-t border-white/5 bg-black/20">
+        <p class="text-xs tracking-[0.5em] uppercase text-gray-500 mb-4">27 March 2026 • North Block Courtyard</p>
+        <p class="text-xs text-gray-600">Created with love for the Civil Seniors.</p>
     </footer>
 
 </body>
