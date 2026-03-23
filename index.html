@@ -3,128 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Legacy | Class of 2026</title>
+    <title>ഇത്തിരി നേരം ഒത്തിരി കാര്യം | Farewell 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;800&family=Noto+Sans+Malayalam:wght@400;700&display=swap');
+
+        :root {
+            --paper-bg: #f5f2ed;
+            --ink-dark: #1a1a1a;
+            --accent-teal: #004D40;
+            --sepia-border: rgba(139, 121, 94, 0.2);
+        }
+
         body {
-            background-color: #020617;
-            color: #f8fafc;
-            font-family: 'Inter', sans-serif;
+            background-color: var(--paper-bg);
+            color: var(--ink-dark);
+            font-family: 'Manrope', sans-serif;
             overflow-x: hidden;
+            background-image: radial-gradient(rgba(0,0,0,0.05) 1px, transparent 0);
+            background-size: 40px 40px;
         }
 
-        .gold-gradient {
-            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .malayalam-title {
+            font-family: 'Noto Sans Malayalam', sans-serif;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: var(--ink-dark);
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.05);
         }
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
+        /* Hanging Paper Effect */
+        .paper-card {
+            background: #ffffff;
+            border: 1px solid var(--sepia-border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05), inset 0 0 100px rgba(0,0,0,0.02);
+            position: relative;
         }
 
-        .video-container {
-            box-shadow: 0 0 50px rgba(250, 204, 21, 0.15);
-            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        .paper-card::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background: var(--sepia-border);
         }
 
-        .video-container:hover {
-            transform: scale(1.02);
+        .video-glow {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 77, 64, 0.15);
         }
 
-        /* Floating Animation */
-        .float { animation: floating 3s ease-in-out infinite; }
-        @keyframes floating {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        .btn-premium {
+            background: var(--accent-teal);
+            color: white;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid transparent;
+        }
+
+        .btn-premium:hover {
+            background: transparent;
+            color: var(--accent-teal);
+            border-color: var(--accent-teal);
+            transform: translateY(-3px);
+        }
+
+        /* Background blur animation like the poster */
+        .bg-blur-circle {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: rgba(0, 77, 64, 0.03);
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
         }
     </style>
 </head>
 <body>
 
-    <section class="min-h-screen flex flex-col items-center justify-center relative px-4">
-        <div class="absolute inset-0 z-0 opacity-20" id="particles"></div>
-        
-        <div class="z-10 text-center animate__animated animate__fadeInUp">
-            <h2 class="uppercase tracking-[0.5em] text-sm mb-4 text-yellow-500 font-semibold">The Final Chapter</h2>
-            <h1 class="text-6xl md:text-8xl font-bold mb-6 gold-gradient" style="font-family: 'Playfair Display';">The Legacy 2026</h1>
-            <p class="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed mb-8">
-                To the mentors, the friends, and the pioneers. Your journey here concludes, but your legend is just beginning.
-            </p>
-            <a href="#video-section" class="px-8 py-4 bg-yellow-500 text-black font-bold rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(250,204,21,0.4)]">
-                VIEW THE SURPRISE
-            </a>
-        </div>
-    </section>
+    <div class="bg-blur-circle top-0 left-0"></div>
+    <div class="bg-blur-circle bottom-0 right-0"></div>
 
-    <section id="video-section" class="py-20 px-4 flex flex-col items-center">
-        <div class="max-w-5xl w-full glass-card p-4 md:p-8 video-container animate__animated animate__fadeIn">
-            <div class="relative pt-[56.25%] overflow-hidden rounded-xl">
+    <nav class="py-8 text-center animate__animated animate__fadeInDown">
+        <p class="uppercase tracking-[0.3em] text-xs font-bold text-gray-500 mb-2">Department of Civil Engineering Presents</p>
+        <div class="h-[1px] w-20 bg-teal-800 mx-auto opacity-30"></div>
+    </nav>
+
+    <header class="max-w-4xl mx-auto text-center px-4 mb-16">
+        <h1 class="malayalam-title text-5xl md:text-7xl font-bold mb-6 animate__animated animate__fadeIn">
+            ഇത്തിരി നേരം <br> ഒത്തിരി കാര്യം
+        </h1>
+        <p class="text-gray-500 tracking-widest uppercase text-sm mb-4">Farewell Party | 2022 – 2026 Batch</p>
+        <p class="italic font-serif text-lg text-gray-600">“It’s strange how strangers become stories you never want to end.”</p>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 pb-24">
+        <div class="video-glow animate__animated animate__zoomIn">
+            <div class="aspect-video bg-black flex items-center justify-center">
                 <iframe 
-                    class="absolute top-0 left-0 w-full h-full border-0"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&rel=0&modestbranding=1" 
-                    title="Farewell Video"
+                    class="w-full h-full shadow-2xl"
+                    src="https://www.youtube.com/embed/your_video_id?rel=0" 
+                    frameborder="0" 
                     allowfullscreen>
                 </iframe>
             </div>
-            
-            <div class="mt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-                <div>
-                    <h3 class="text-2xl font-bold text-white">Class of 2026: The Movie</h3>
-                    <p class="text-slate-500 italic">"Every ending is a new beginning."</p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="paper-card p-8 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                <span class="text-4xl text-teal-800 opacity-20 font-serif">“</span>
+                <p class="text-gray-700 leading-relaxed -mt-4">Build bridges, not walls. You’ve mastered the engineering of structures, now go engineer a beautiful life.</p>
+                <div class="mt-6 border-t pt-4">
+                    <p class="font-bold text-sm uppercase">The Faculty</p>
                 </div>
-                <div class="flex gap-4">
-                    <button class="p-3 glass-card hover:bg-yellow-500/20 transition-colors">❤️ 124</button>
-                    <button class="p-3 glass-card hover:bg-yellow-500/20 transition-colors">📤 Share</button>
+            </div>
+
+            <div class="paper-card p-8 animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                <span class="text-4xl text-teal-800 opacity-20 font-serif">“</span>
+                <p class="text-gray-700 leading-relaxed -mt-4">From site visits to late-night submissions, we grew up together. See you at the top, Seniors!</p>
+                <div class="mt-6 border-t pt-4">
+                    <p class="font-bold text-sm uppercase">Junior Batch</p>
+                </div>
+            </div>
+
+            <div class="paper-card p-8 animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
+                <span class="text-4xl text-teal-800 opacity-20 font-serif">“</span>
+                <p class="text-gray-700 leading-relaxed -mt-4">To the batch that survived the toughest juries and made the best memories. Cheers to 2026!</p>
+                <div class="mt-6 border-t pt-4">
+                    <p class="font-bold text-sm uppercase">Organizing Team</p>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <section class="py-20 max-w-6xl mx-auto px-4">
-        <h2 class="text-4xl font-bold mb-12 text-center" style="font-family: 'Playfair Display';">Voices of Gratitude</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="glass-card p-8 float" style="animation-delay: 0s;">
-                <p class="italic text-slate-300 mb-6">"Thank you for showing us what leadership really looks like. You've set the bar high for all of us!"</p>
-                <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 bg-yellow-500 rounded-full"></div>
-                    <div>
-                        <p class="font-bold text-sm text-white">Alex Rivera</p>
-                        <p class="text-xs text-slate-500">Junior Year</p>
-                    </div>
-                </div>
-            </div>
-            <div class="glass-card p-8 float" style="animation-delay: 0.5s;">
-                <p class="italic text-slate-300 mb-6">"To my mentors: your patience and wisdom made the difference. We will miss you in the halls."</p>
-                <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 bg-yellow-500 rounded-full"></div>
-                    <div>
-                        <p class="font-bold text-sm text-white">Sarah Chen</p>
-                        <p class="text-xs text-slate-500">Sophomore Year</p>
-                    </div>
-                </div>
-            </div>
-            <div class="glass-card p-8 float" style="animation-delay: 1s;">
-                <p class="italic text-slate-300 mb-6">"The late nights and the hard work—you did it all with a smile. Go change the world!"</p>
-                <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 bg-yellow-500 rounded-full"></div>
-                    <div>
-                        <p class="font-bold text-sm text-white">Jordan Smith</p>
-                        <p class="text-xs text-slate-500">Student Body</p>
-                    </div>
-                </div>
-            </div>
+    <footer class="bg-white/50 border-t border-gray-200 py-12 text-center">
+        <div class="mb-6">
+            <p class="font-bold text-gray-900">27 MARCH 2026</p>
+            <p class="text-gray-500 uppercase text-xs tracking-widest">North Block Courtyard</p>
         </div>
-    </section>
-
-    <footer class="py-10 text-center text-slate-600 text-sm border-t border-white/5">
-        <p>© 2026 Crafted with ❤️ for our Seniors</p>
+        <button class="btn-premium px-10 py-3 rounded-full font-bold text-sm tracking-widest uppercase">
+            Download Memories
+        </button>
     </footer>
 
 </body>
