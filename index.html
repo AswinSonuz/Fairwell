@@ -33,31 +33,14 @@
             font-family: 'Cinzel', serif;
         }
 
-        /* Premium Video Styling */
+        /* Video Section Styling */
         .video-wrapper {
             position: relative;
             z-index: 10;
         }
 
-        .video-controls {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 15px;
-            z-index: 30;
-            opacity: 0;
-            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        .video-wrapper:hover .video-controls {
-            opacity: 1;
-            transform: translateX(-50%) translateY(-10px);
-        }
-
         .ctrl-btn {
-            background: rgba(10, 10, 10, 0.4);
+            background: rgba(15, 15, 15, 0.6);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(212, 175, 55, 0.3);
             color: var(--gold-light);
@@ -66,7 +49,7 @@
             text-transform: uppercase;
             letter-spacing: 3px;
             font-weight: 700;
-            transition: 0.4s;
+            transition: all 0.4s ease;
         }
 
         .ctrl-btn:hover {
@@ -165,22 +148,27 @@
     <section id="main-video" class="py-40 px-6 max-w-5xl mx-auto flex flex-col items-center">
         <div class="text-center mb-16 reveal-on-scroll">
             <p class="text-gray-400 italic text-lg mb-4">"It’s strange how strangers become stories you never want to end."</p>
-            <div class="w-12 h-[2px] bg-gold-primary mx-auto"></div>
+            <div class="w-16 h-[1px] bg-gold-primary mx-auto opacity-50"></div>
         </div>
 
         <div class="video-wrapper w-full reveal-on-scroll">
-            <div class="aspect-video bg-black shadow-[0_0_80px_rgba(0,0,0,0.9)] border border-white/5 rounded-sm relative overflow-hidden">
-                
-                <video id="farewellVid" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+            <div class="aspect-video bg-black shadow-[0_0_80px_rgba(0,0,0,0.9)] border border-white/5 rounded-t-sm relative overflow-hidden">
+                <video id="farewellVid" playsinline loop class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
                     <source src="lv_0_20260323155248.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                
-                <div class="video-controls">
+            </div>
+
+            <div class="bg-black/60 backdrop-blur-xl border-x border-b border-white/10 p-8 flex flex-col items-center gap-6 rounded-b-sm">
+                <div class="flex gap-4">
                     <button class="ctrl-btn" onclick="playVid()">Play</button>
                     <button class="ctrl-btn" onclick="pauseVid()">Pause</button>
                     <button class="ctrl-btn" id="muteBtn" onclick="toggleMuteVid()">Mute</button>
                 </div>
+                
+                <p class="text-[9px] tracking-[0.6em] uppercase text-gold-primary/60 animate-pulse">
+                    Press Play to Begin the Experience
+                </p>
             </div>
         </div>
     </section>
@@ -190,7 +178,6 @@
         <div class="absolute right-10 top-0 w-[1px] h-full bg-white/5 hidden lg:block"></div>
 
         <div class="flex flex-col space-y-48 md:space-y-72">
-
             <div class="relative w-full md:w-3/4 self-start reveal-on-scroll">
                 <div class="absolute -top-6 -left-6 w-24 h-24 border-t-2 border-l-2 border-gold-primary/40 opacity-30"></div>
                 <div class="glass-quote p-12 md:p-20 bg-gradient-to-br from-white/[0.04] to-transparent shadow-2xl hover:border-gold-primary/60 transition-all duration-700">
@@ -240,7 +227,7 @@
                 <div class="absolute -bottom-6 -right-6 w-24 h-24 border-b-2 border-r-2 border-gold-primary/40 opacity-30"></div>
                 <div class="glass-quote p-12 md:p-20 bg-gradient-to-bl from-white/[0.04] to-transparent border-l-0 border-r-4 border-gold-primary shadow-2xl text-right hover:border-gold-primary/60 transition-all duration-700">
                     <p class="text-2xl md:text-5xl font-extralight text-white leading-relaxed mb-16 italic tracking-tight">
-                        "Go forth and <span class="text-gold-light italic">design</span> a world that is sustainable, strong, and <span class="gold-text italic font-normal">extraordinary</span>."
+                        "Believe in your abilities, trust your journey, and keep moving forward no matter the obstacles. You are capable of achieving more than you think."
                     </p>
                     <div class="flex items-center justify-end gap-6">
                         <div class="flex flex-col">
@@ -265,7 +252,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -281,8 +267,14 @@
         const v = document.getElementById("farewellVid");
         const mBtn = document.getElementById("muteBtn");
 
-        function playVid() { v.play(); }
-        function pauseVid() { v.pause(); }
+        function playVid() { 
+            v.play(); 
+        }
+        
+        function pauseVid() { 
+            v.pause(); 
+        }
+
         function toggleMuteVid() {
             if (v.muted) {
                 v.muted = false;
